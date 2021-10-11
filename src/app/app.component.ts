@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'spotify-a';
+  name:  string = 'imanol';
 }
