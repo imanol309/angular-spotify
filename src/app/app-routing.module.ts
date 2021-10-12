@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  
+  { 
+    path: '', //Ruta principal es igual a  = localhost:4200/
+    loadChildren:() => import('./modules/home/home.module').then((m) => m.HomeModule)
+  }
 
 ];
 
