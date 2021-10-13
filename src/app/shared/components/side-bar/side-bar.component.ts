@@ -38,11 +38,11 @@ export class SideBarComponent implements OnInit {
     this.mainMenu.accessLink = [
       {
         name: 'Crear lista',
-        icon: 'uil-plus-square'
+        icon: 'uil uil-plus-square'
       },
       {
         name: 'Canciones que te gustan',
-        icon: 'uil-heart-medical'
+        icon: 'uil uil-heart-medical'
       }
     ]
 
