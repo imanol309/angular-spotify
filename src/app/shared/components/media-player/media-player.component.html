@@ -20,10 +20,10 @@
 
 <ng-template #artistZone>
     <div class="artist-inside" *ngIf="true">
-        <img [src]="'https://jenesaispop.com/wp-content/uploads/2009/09/guetta_onelove.jpg'" alt="" class="cover">
+        <img [src]="mockCover.cover" alt="" class="cover">
         <div class="track-info">
-            <h3 class="track-title">David Guetta</h3>
-            <h5 class="track-title sub-title">One Love</h5>
+            <h3 class="track-title">{{mockCover.name}}</h3>
+            <h5 class="track-title sub-title">{{mockCover.album}}</h5>
         </div>
         <div class="track-like">
             <button class="btn-like">
