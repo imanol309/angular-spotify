@@ -7,8 +7,9 @@ import { TrackModel } from '@core/models/tracks.model';
   styleUrls: ['./card-player.component.css']
 })
 export class CardPlayerComponent implements OnInit {
-  @Input() mode:any;
+  @Input() mode:'small' | 'big' = 'small';
   @Input() track!:TrackModel;
+
   constructor() { }
 
   ngOnInit(): void {

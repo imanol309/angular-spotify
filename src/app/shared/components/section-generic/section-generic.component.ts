@@ -11,7 +11,6 @@ export class SectionGenericComponent implements OnInit {
   @Input() mode: 'small' | 'big' = 'big'
   @Input() dataTracks: Array<TrackModel> = []
 
-
   constructor() { }
 
   ngOnInit(): void {

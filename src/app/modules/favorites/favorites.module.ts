@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FavoritesRoutingModule } from './favorites-routing.module';
 import { FavoritesPagesComponent } from './pages/favorites-pages/favorites-pages.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { FavoritesPagesComponent } from './pages/favorites-pages/favorites-pages
   ],
   imports: [
     CommonModule,
-    FavoritesRoutingModule
+    FavoritesRoutingModule,
+    SharedModule
   ]
 })
 export class FavoritesModule { }
