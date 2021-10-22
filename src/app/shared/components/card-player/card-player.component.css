@@ -72,9 +72,13 @@
     align-items: flex-start;
 }
 
-.card-player.player-big .content-player .sub-title-track {
+.card-player.player-big .sub-title-track {
     font-size: 80%;
     opacity: .7;
+}
+
+.content-player{ 
+    font-size: 85%;
 }
 
 .card-player.player-big .buttons-player {
