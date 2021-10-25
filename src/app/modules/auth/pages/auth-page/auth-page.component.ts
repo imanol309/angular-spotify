@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '@modules/auth/services/auth.service';
 
 @Component({
   selector: 'app-auth-page',
@@ -10,7 +11,7 @@ export class AuthPageComponent implements OnInit {
 
   formLogin:  FormGroup =  new FormGroup({})
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
 
@@ -20,6 +21,7 @@ export class AuthPageComponent implements OnInit {
           Validators.required,
           Validators.email
         ]),
+
         password: new FormControl('',[
           Validators.required,
           Validators.minLength(6),
@@ -30,9 +32,9 @@ export class AuthPageComponent implements OnInit {
 
   }
 
-  Capturar() {
-    const body  =  this.formLogin.value
-    console.log(body)
+  Capturar(): void {
+    const {email, password}  =  this.formLogin.value
+    this.authService.sendCredentials(email, password)
   }
 
 }
