@@ -16,6 +16,9 @@ export class CardPlayerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  sendPlay(track: TrackModel): void {
+    console.log('Enviando cancion al reproducto', track)
+    this.multimediaService.callback.emit(track)
+  }
 
 }
